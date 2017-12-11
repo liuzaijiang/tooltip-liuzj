@@ -1,0 +1,70 @@
+﻿   .tooltip{
+      position:fixed;
+      z-index:999;
+   }
+   .tooltip-wrap{
+     position:relative;
+     width:0;
+     height:0;
+   }
+   .tooltip-content-top,
+   .tooltip-content-bottom,
+   .tooltip-content-left,
+   .tooltip-content-right{
+     position:absolute;
+     top:0;
+     left:0;
+     padding:6px 8px;
+     color:#fff;
+     white-space:nowrap;
+     background-color:#000;     
+     border-radius:5px;
+     font-size:12px;
+   }
+   .tooltip-content-top:after{
+      position:absolute;
+      content:"";
+      border-top:4px solid #000;
+      border-bottom:4px solid transparent;
+      border-left:4px solid transparent;
+      border-right:4px solid transparent;
+      top:100%;
+      left:46%;
+      z-index:-1;
+    }
+    
+    .tooltip-content-bottom:after{
+      position:absolute;
+      content:"";
+      border-top:4px solid transparent;
+      border-bottom:4px solid #000;
+      border-left:4px solid transparent;
+      border-right:4px solid transparent;
+      bottom:100%;
+      left:46%;           
+      z-index:-1;
+    }
+    
+    .tooltip-content-left:after{
+      position:absolute;
+      content:"";
+      border-top:4px solid transparent;
+      border-bottom:4px solid transparent;
+      border-left:4px solid #000;
+      border-right:4px solid transparent;
+      top:8px;
+      left:100%;   
+      z-index:-1;
+    }
+    
+    .tooltip-content-right:after{
+      position:absolute;
+      content:"";
+      border-top:4px solid transparent;
+      border-bottom:4px solid transparent;
+      border-left:4px solid transparent;
+      border-right:4px solid #000;
+      top:8px;
+      right:100%;   
+      z-index:-1;
+    }
