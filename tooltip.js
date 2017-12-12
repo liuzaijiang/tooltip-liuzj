@@ -31,19 +31,18 @@ function initToolTip(e, direction, string) {
    string : string
   })
   $("body").append(dom);
- var scrollTop = $(window).scrollTop()
   if (direction == "top") {
-   var top = dataObj.top - parseInt($(".tooltip-content-top").outerHeight()) - 4 - scrollTop;
+   var top = dataObj.top - parseInt($(".tooltip-content-top").outerHeight()) - 4;
    var left = dataObj.left + parseInt(dataObj.width / 2) - parseInt($(".tooltip-content-top").outerWidth() / 2);
   } else if (direction == "bottom") {
-   var top = dataObj.top + dataObj.height + 4 - scrollTop;
-   var left = dataObj.left + parseInt(dataObj.width / 2) - parseInt($(".tooltip-content-bottom").outerWidth() / 2) - document.body.scrollLeft; ;
+   var top = dataObj.top + dataObj.height + 4;
+   var left = dataObj.left + parseInt(dataObj.width / 2) - parseInt($(".tooltip-content-bottom").outerWidth() / 2);
   } else if (direction == "left") {
-   var top = dataObj.top + parseInt(dataObj.height / 2) - parseInt($(".tooltip-content-left").outerHeight() / 2) - scrollTop;
-   var left = dataObj.left - parseInt(dataObj.width / 2) + 4 - document.body.scrollLeft;
+   var top = dataObj.top + parseInt(dataObj.height / 2) - parseInt($(".tooltip-content-left").outerHeight() / 2);
+   var left = dataObj.left - parseInt(dataObj.width / 2) + 4;
   } else if (direction == "right") {
-   var top = dataObj.top + parseInt(dataObj.height / 2) - parseInt($(".tooltip-content-right").outerHeight() / 2) - scrollTop;
-   var left = dataObj.left + dataObj.width + 4 - document.body.scrollLeft;
+   var top = dataObj.top + parseInt(dataObj.height / 2) - parseInt($(".tooltip-content-right").outerHeight() / 2);
+   var left = dataObj.left + dataObj.width + 4;
   }
   $(".tooltip").css({
    'left' : left + 'px',

@@ -1,5 +1,5 @@
 ﻿   .tooltip{
-      position:fixed;
+      position:absolute;
       z-index:999;
    }
    .tooltip-wrap{
